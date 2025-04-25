@@ -11,7 +11,7 @@ class Node:
 
 class Dictionary:
     def __init__(self, initial_capacity: int = 16,
-                 load_factor: float = 0.75) -> int:
+                 load_factor: float = 0.75) -> None:
         self.capacity = initial_capacity
         self.table: list[Optional[Node]] = [None] * self.capacity
         self.size: int = 0
@@ -86,7 +86,6 @@ class Dictionary:
                 current = current.next
 
     def clear(self) -> None:
-        self.capacity = 16
         self.table = [None] * self.capacity
         self.size = 0
 
